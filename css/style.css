@@ -1,0 +1,124 @@
+html, body {
+    /*prevents full-width pseudo-element that extends off page from making page unresponsive*/
+    overflow-x:hidden;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    color:#333333;
+}
+
+.pagewrapper {
+    position:relative;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 30px;
+}
+
+header {
+position:relative;
+/* Background pattern from Toptal Subtle Patterns, creator Yongja Kim */
+background-image: url("../images/dust_scratches.png");
+padding:30px 30px 35px;
+}
+
+footer {
+    position:relative;
+    text-align: center;
+    padding: 65px 30px;
+    margin-top: 40px;
+    background-image: url("../images/dust_scratches.png");
+}
+
+/*full-width header and footer*/
+header::before, footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: -100%;
+    background-image: url("../images/dust_scratches.png");
+    z-index: -1;
+}
+
+
+header h1 {
+margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+p,
+a {
+    font-size: 20px;
+}
+
+nav h3 {
+    margin: 5px 0;
+}
+
+nav>a {
+    display: block;
+    text-align: center;
+}
+
+article {
+    margin-top: 40px;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+}
+
+.buddy-article {
+    display: flex;
+    margin-top: 51px;
+}
+
+.buddy-text-contain {
+    width: 20%;
+    margin-left: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media(max-width:900px) {
+    .buddy-article {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 17px;
+    }
+
+    .buddy-text-contain {
+        width: 100%;
+        display:block;
+    }
+}
+
+footer {
+text-align:center;
+}
